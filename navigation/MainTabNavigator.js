@@ -6,19 +6,27 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import SearchScreen from '../screens/SearchScreen';
+import FavScreen from '../screens/FavScreen';
+import InterestsScreen from '../screens/InterestsScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
     },
-    Links: {
-      screen: LinksScreen,
+    Search: {
+      screen: SearchScreen,
     },
-    Settings: {
-      screen: SettingsScreen,
+    Fav: {
+      screen: FavScreen,
+    },
+    Interests: {
+      screen: InterestsScreen,
+    },
+    Profile: {
+      screen: ProfileScreen,
     },
   },
   {
@@ -29,18 +37,29 @@ export default TabNavigator(
         switch (routeName) {
           case 'Home':
             iconName = Platform.OS === 'ios'
-              ? `ios-information-circle${focused ? '' : '-outline'}`
-              : 'md-information-circle';
+              ? `ios-home${focused ? '' : '-outline'}`
+              : 'md-home';
             break;
-          case 'Links':
+          case 'Search':
             iconName = Platform.OS === 'ios'
-              ? `ios-link${focused ? '' : '-outline'}`
-              : 'md-link';
+              ? `ios-search${focused ? '' : '-outline'}`
+              : 'md-search';
             break;
-          case 'Settings':
+          case 'Fav':
             iconName = Platform.OS === 'ios'
-              ? `ios-options${focused ? '' : '-outline'}`
-              : 'md-options';
+              ? `ios-heart${focused ? '' : '-outline'}`
+              : 'md-heart';
+            break;
+          case 'Interests':
+            iconName = Platform.OS === 'ios'
+              ? `ios-albums${focused ? '' : '-outline'}`
+              : 'md-albums';
+            break;
+          case 'Profile':
+            iconName = Platform.OS === 'ios'
+              ? `ios-person${focused ? '' : '-outline'}`
+              : 'md-person';
+            break;
         }
         return (
           <Ionicons
@@ -54,7 +73,7 @@ export default TabNavigator(
     }),
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
-    animationEnabled: false,
-    swipeEnabled: false,
+    animationEnabled: true,
+    swipeEnabled: true,
   }
 );
