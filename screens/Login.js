@@ -7,7 +7,8 @@ import {
   Text,
   TouchableOpacity,
   View,
-  TextInput
+  TextInput,
+  AsyncStorage
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -18,15 +19,13 @@ export default class Login extends React.Component {
     header: null,
   };
 
+
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'crimson' }}>Logo</Text>
         <TouchableOpacity
-          onPress={() =>
-            navigate('Main', {})
-          }
           style={{  width: '50%', margin: 30, backgroundColor: 'crimson', }}>
           <Text style={{ color: 'white', padding: 20, borderRadius: 10, fontSize: 23, textAlign: 'center' }}>Login</Text>
         </TouchableOpacity>
