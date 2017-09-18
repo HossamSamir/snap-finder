@@ -15,7 +15,7 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
-export default class Login extends React.Component {
+export default class Signup extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -26,10 +26,11 @@ export default class Login extends React.Component {
     return (
       <View style={styles.container}>
           <Image source={require('../assets/images/bg.jpg')} style={{ width: '100%', height: '100%', position: 'absolute', resizeMode: 'cover' }}/>
-          <View style={{ flex: 1, backgroundColor: 'transparent', marginTop: '60%', marginVertical: '10%', width: '80%' }}>
+          <View style={{ flex: 1, backgroundColor: 'transparent', marginTop: '55%', marginVertical: '10%', width: '80%' }}>
 
-            <KeyboardAvoidingView behavior='position' style={{ flex: .5 }}>
+            <KeyboardAvoidingView behavior='position' style={{ flex: 1 }}>
               <TextInput placeholder='username' placeholderTextColor='#6b7887' style={{ marginBottom: 30, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
+              <TextInput placeholder='email' placeholderTextColor='#6b7887' style={{ marginBottom: 30, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
               <TextInput placeholder='password' secureTextEntry={true} placeholderTextColor='#6b7887' style={{ marginBottom: 30, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
             </KeyboardAvoidingView>
 
@@ -46,18 +47,17 @@ export default class Login extends React.Component {
                     paddingHorizontal: 100,
                     paddingVertical: 10,
                    }}>
-                <Text style={{ color: 'white', fontSize: 17 }}>Login</Text>
+                <Text style={{ color: 'white', fontSize: 17 }}>Singup</Text>
                 </TouchableOpacity>
               </View>
-
 
               <View style={{ flex: .1, justifyContent: 'center', alignItems: 'center' }}>
                 <TouchableOpacity
                   onPress={() => {
-                    this.props.navigation.navigate('Signup', {})
+                    this.props.navigation.navigate('Login', {})
                   }}
                   >
-                <Text style={{ color: 'white', fontSize: 17 }}>Dont have account yet?</Text>
+                <Text style={{ color: 'white', fontSize: 17 }}>already have an account?</Text>
                 </TouchableOpacity>
               </View>
 
