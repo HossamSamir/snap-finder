@@ -9,14 +9,14 @@ import registerForPushNotificationsAsync from '../api/registerForPushNotificatio
 
 const RootStackNavigator = StackNavigator(
   {
+    Main: {
+      screen: MainTabNavigator,
+    },
     Login: {
       screen: Login,
     },
     Signup: {
       screen: Signup,
-    },
-    Main: {
-      screen: MainTabNavigator,
     },
   },
   {

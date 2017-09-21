@@ -7,63 +7,40 @@ import {
   Text,
   TouchableOpacity,
   View,
-  FlatList
+  FlatList,
+  Dimensions
 } from 'react-native';
-import SwipeableParallaxCarousel from 'react-native-swipeable-parallax-carousel';
-import { MonoText } from '../components/StyledText';
+import Carousel from 'react-native-looped-carousel';
 
-const datacarousel = [
-  {
-      "id": 339964,
-      "title": "Valerian and the City of a Thousand Planets",
-      "imagePath": "https://image.tmdb.org/t/p/w780/o6OhxtsgMurL4h68Uqei0aSPMNr.jpg",
-  },
-  {
-      "id": 315635,
-      "imagePath": "https://image.tmdb.org/t/p/w780/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg",
-  },
-  {
-      "id": 339403,
-      "title": "Baby Driver",
-      "subtitle": "More than just a trend",
-      "imagePath": "https://image.tmdb.org/t/p/w780/xWPXlLKSLGUNYzPqxDyhfij7bBi.jpg",
-  },
-];
+const { width, height } = Dimensions.get('window');
 
 export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [
-        {key: 'user #1'},
-        {key: 'user #2'},
-        {key: 'user #3'},
-        {key: 'user #4'},
-        {key: 'user #5'},
-        {key: 'user #6'},
-        {key: 'user #7'},
-        {key: 'user #8'},
-      ]
+      size: { width, height },
     }
   }
   static navigationOptions = {
     header: null,
   };
+  _onLayoutDidChange = (e) => {
+    const layout = e.nativeEvent.layout;
+    this.setState({ size: { width: layout.width, height: layout.height } });
+  }
   render() {
     return (
-      <View style={styles.container}>
-        <SwipeableParallaxCarousel
-          titleColor='white'
-          navigation={true}
-          navigationColor='white'
-          data={datacarousel}/>
-          <FlatList
-          data={this.state.users}
-          renderItem={
-            ({item}) =>
-            <View style={{ width: '100%', backgroundColor: 'crimson', margin: 20 }}>
-              <Text style={{ color: 'white', fontSize: 25, padding: 20 }}>{item.key}</Text>
-            </View>}/>
+      <View style={styles.container} onLayout={this._onLayoutDidChange}>
+        <Carousel
+          delay={3000}
+          bullets={true}
+          style={{ width, height: 200 }}
+          autoplay
+        >
+          <View style={[{ alignItems: 'center', backgroundColor: 'darkblue' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #1</Text></View>
+          <View style={[{ alignItems: 'center', backgroundColor: 'red' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #2</Text></View>
+          <View style={[{ alignItems: 'center', backgroundColor: 'crimson' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #3</Text></View>
+        </Carousel>
       </View>
     );
   }
