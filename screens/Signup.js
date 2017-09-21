@@ -25,17 +25,17 @@ export default class Signup extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-          <Image source={require('../assets/images/bg.jpg')} style={{ width: '100%', height: '100%', position: 'absolute', resizeMode: 'cover' }}/>
-          <View style={{ flex: 1, backgroundColor: 'transparent', marginTop: '55%', marginVertical: '10%', width: '80%' }}>
+          <Image source={require('../assets/images/bg1.jpg')} style={{ width: '100%', height: '100%', position: 'absolute', resizeMode: 'cover' }}/>
+          <View style={{ flex: 1, backgroundColor: 'transparent', marginTop: '70%', width: '80%' }}>
 
             <KeyboardAvoidingView behavior='position' style={{ flex: 1 }}>
-              <TextInput placeholder='username' placeholderTextColor='#6b7887' style={{ marginBottom: 30, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
-              <TextInput placeholder='email' placeholderTextColor='#6b7887' style={{ marginBottom: 30, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
-              <TextInput placeholder='password' secureTextEntry={true} placeholderTextColor='#6b7887' style={{ marginBottom: 30, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
+              <TextInput placeholder='username' placeholderTextColor='#6b7887' style={{ marginBottom: 15, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
+              <TextInput placeholder='email' placeholderTextColor='#6b7887' style={{ marginBottom: 15, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
+              <TextInput placeholder='password' secureTextEntry={true} placeholderTextColor='#6b7887' style={{ marginBottom: 15, borderBottomWidth: 1, borderBottomColor: '#6b7887', color: 'white' }} />
             </KeyboardAvoidingView>
 
 
-              <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{ flex: .5, justifyContent: 'center', alignItems: 'center' }}>
                 <TouchableOpacity
                   onPress={() => {
                     this.props.navigation.navigate('Main', {})
@@ -49,15 +49,12 @@ export default class Signup extends React.Component {
                    }}>
                 <Text style={{ color: 'white', fontSize: 17 }}>Singup</Text>
                 </TouchableOpacity>
-              </View>
-
-              <View style={{ flex: .1, justifyContent: 'center', alignItems: 'center' }}>
                 <TouchableOpacity
                   onPress={() => {
                     this.props.navigation.navigate('Login', {})
                   }}
                   >
-                <Text style={{ color: 'white', fontSize: 17 }}>already have an account?</Text>
+                <Text style={{ color: 'white', fontSize: 17, marginTop: 20 }}>have an account?</Text>
                 </TouchableOpacity>
               </View>
 
