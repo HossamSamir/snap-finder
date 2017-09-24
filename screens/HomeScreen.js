@@ -63,8 +63,37 @@ export default class HomeScreen extends React.Component {
           id: 6
         },
       ],
+      [
+        {
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President',
+          id: 7
+        },
+        {
+          name: 'Hossam Samir',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President',
+          id: 8
+        },
+      ],
+      [
+        {
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President',
+          id: 9
+        },
+        {
+          name: 'Hossam Samir',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President',
+          id: 10
+        },
+      ],
     ],
       size: { width, height },
+      heartIcon: 'ios-heart-outline'
     }
   }
   static navigationOptions = {
@@ -96,12 +125,36 @@ export default class HomeScreen extends React.Component {
             <FlatList
               data = {this.state.users}
               renderItem = {({ item }) => (
-                <View style={{ flex: 1, flexDirection: 'row' }}>
-                  <View style={{ flex: 1, backgroundColor: 'red', margin: 10, height: 60 }}>
-
+                <View style={{ flex: 1, flexDirection: 'row',  }}>
+                  <View style={{ flex: 1, margin: 10,  }}>
+                    <Image
+                      style={{ flex: 1, height: 150, resizeMode: 'contain'}}
+                      source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
+                    />
+                  <Text style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item[0].name}</Text>
+                    <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
+                      <TouchableOpacity>
+                        <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                      </TouchableOpacity>
+                      <TouchableOpacity>
+                      <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                      </TouchableOpacity>
+                    </View>
                   </View>
-                  <View style={{ flex: 1, backgroundColor: 'red', margin: 10, height: 60 }}>
-
+                  <View style={{ flex: 1, margin: 10,  }}>
+                    <Image
+                      style={{ flex: 1, height: 150, resizeMode: 'contain'}}
+                      source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
+                    />
+                  <Text style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item[1].name}</Text>
+                    <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
+                      <TouchableOpacity>
+                        <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                      </TouchableOpacity>
+                      <TouchableOpacity>
+                      <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                      </TouchableOpacity>
+                    </View>
                   </View>
                 </View>
               )}
