@@ -106,8 +106,12 @@ export default class FavScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Image
+          style={{ width, marginBottom: -38, resizeMode: 'contain'}}
+          source={require('../assets/images/header.jpg')}
+        />
 
-          <List containerStyle={{flex: 1, flexDirection: 'row', marginTop: 30}}>
+      <List containerStyle={{flex: 1, flexDirection: 'row', marginTop: 30, borderTopWidth: 0}}>
             <FlatList
               data = {this.state.users}
               renderItem = {({ item }) => (
