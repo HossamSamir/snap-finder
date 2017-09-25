@@ -103,17 +103,9 @@ export default class SeacrhScreen extends React.Component {
     const layout = e.nativeEvent.layout;
     this.setState({ size: { width: layout.width, height: layout.height } });
   }
-  render() {
+  _renderHeader = () => {
     return (
-      <View style={styles.container}>
-
-
-        <SearchBar
-          lightTheme
-          clearIcon
-          onChangeText={this._handleSearch}
-          placeholder='Find someone...' />
-
+      <View>
         <Text style={{ marginTop: 10, marginLeft: 10, fontSize: 17, fontWeight: 'bold', color: 'grey' }}>Trending people:</Text>
 
           <List containerStyle={{flex: 1, flexDirection: 'row',}}>
@@ -132,10 +124,20 @@ export default class SeacrhScreen extends React.Component {
               keyExtractor={item => item[0].id}
             />
           </List>
+      </View>
+    )
+  }
+  render() {
+    return (
+      <View style={{ flex: 1, backgroundColor: '#fff', paddingTop: 20 }}>
+        <SearchBar
+          lightTheme
+          clearIcon
+          onChangeText={this._handleSearch}
+          placeholder='Find someone...' />
 
 
 
-        <Text style={{ marginTop: -50, marginLeft: 10, fontSize: 17, fontWeight: 'bold', color: 'grey' }}>Seacrh results:</Text>
 
           <List containerStyle={{flex: 1, flexDirection: 'row', marginTop: 30}}>
             <FlatList
@@ -175,6 +177,7 @@ export default class SeacrhScreen extends React.Component {
                 </View>
               )}
               keyExtractor={item => item[0].id}
+              ListHeaderComponent = {this._renderHeader}
             />
           </List>
 
