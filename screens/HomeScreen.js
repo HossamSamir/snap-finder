@@ -103,29 +103,31 @@ export default class HomeScreen extends React.Component {
     const layout = e.nativeEvent.layout;
     this.setState({ size: { width: layout.width, height: layout.height } });
   }
+
+  _renderHeader = () => {
+    return (
+      <Carousel
+        delay={3000}
+        bullets={true}
+        style={{ width, height: 200, }}
+        autoplay
+      >
+        <View style={[{ alignItems: 'center', backgroundColor: 'darkblue' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #1</Text></View>
+        <View style={[{ alignItems: 'center', backgroundColor: 'red' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #2</Text></View>
+        <View style={[{ alignItems: 'center', backgroundColor: 'crimson' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #3</Text></View>
+      </Carousel>
+    )
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Image
-          style={{ width, resizeMode: 'contain'}}
+          style={{ width, marginBottom: -38, resizeMode: 'contain'}}
           source={require('../assets/images/header.jpg')}
         />
-        <Carousel
-          delay={3000}
-          bullets={true}
-          style={{ width, height: 200 }}
-          autoplay
-        >
-          <View style={[{ alignItems: 'center', backgroundColor: 'darkblue' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #1</Text></View>
-          <View style={[{ alignItems: 'center', backgroundColor: 'red' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #2</Text></View>
-          <View style={[{ alignItems: 'center', backgroundColor: 'crimson' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #3</Text></View>
-        </Carousel>
 
-
-
-
-
-          <List containerStyle={{flex: 1, flexDirection: 'row', marginTop: 30}}>
+      <List containerStyle={{flex: 1, flexDirection: 'row',}}>
             <FlatList
               data = {this.state.users}
               renderItem = {({ item }) => (
@@ -163,6 +165,7 @@ export default class HomeScreen extends React.Component {
                 </View>
               )}
               keyExtractor={item => item[0].id}
+              ListHeaderComponent = {this._renderHeader}
             />
           </List>
 
