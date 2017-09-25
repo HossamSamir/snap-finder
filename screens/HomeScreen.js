@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import Carousel from 'react-native-looped-carousel';
 import { Ionicons } from '@expo/vector-icons';
-import { List, ListItem } from 'react-native-elements';
+import { List, ListItem, } from 'react-native-elements';
 
 const { width, height } = Dimensions.get('window');
 
@@ -106,6 +106,10 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Image
+          style={{ width, resizeMode: 'contain'}}
+          source={require('../assets/images/header.jpg')}
+        />
         <Carousel
           delay={3000}
           bullets={true}
