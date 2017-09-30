@@ -3,6 +3,7 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
+import Interest from '../screens/Interest';
 
 import MainTabNavigator from './MainTabNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
@@ -17,6 +18,9 @@ const RootStackNavigator = StackNavigator(
     },
     Signup: {
       screen: Signup,
+    },
+    Interest: {
+      screen: Interest,
     },
   },
   {

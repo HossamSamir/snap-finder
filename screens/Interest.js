@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Image,
   Platform,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -11,11 +12,11 @@ import {
 } from 'react-native';
 import Carousel from 'react-native-looped-carousel';
 import { Ionicons } from '@expo/vector-icons';
-import { List, ListItem, } from 'react-native-elements';
+import { List, ListItem } from 'react-native-elements';
 
 const { width, height } = Dimensions.get('window');
 
-export default class HomeScreen extends React.Component {
+export default class FavScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -102,22 +103,6 @@ export default class HomeScreen extends React.Component {
     const layout = e.nativeEvent.layout;
     this.setState({ size: { width: layout.width, height: layout.height } });
   }
-
-  _renderHeader = () => {
-    return (
-      <Carousel
-        delay={3000}
-        bullets={true}
-        style={{ width, height: 200, }}
-        autoplay
-      >
-        <View style={[{ alignItems: 'center', backgroundColor: 'darkblue' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #1</Text></View>
-        <View style={[{ alignItems: 'center', backgroundColor: 'red' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #2</Text></View>
-        <View style={[{ alignItems: 'center', backgroundColor: 'crimson' }, this.state.size]}><Text style={{  color: 'white', fontSize: 40, marginTop: 50}}>slide #3</Text></View>
-      </Carousel>
-    )
-  }
-
   render() {
     return (
       <View style={styles.container}>
@@ -125,8 +110,9 @@ export default class HomeScreen extends React.Component {
           style={{ width, marginBottom: -38, resizeMode: 'contain'}}
           source={require('../assets/images/header.jpg')}
         />
+      <Text style={{ textAlign: 'center', fontSize: 19, marginTop: 20, fontWeight: 'bold', color: 'crimson' }}>{ this.props.navigation.state.params.cat.name }</Text>
 
-      <List containerStyle={{flex: 1, flexDirection: 'row',}}>
+      <List containerStyle={{flex: 1, flexDirection: 'row', marginTop: 30, borderTopWidth: 0}}>
             <FlatList
               data = {this.state.users}
               renderItem = {({ item }) => (
@@ -139,7 +125,7 @@ export default class HomeScreen extends React.Component {
                   <Text style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item[0].name}</Text>
                     <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
                       <TouchableOpacity>
-                        <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        <Ionicons name='ios-heart-outline' size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                       </TouchableOpacity>
                       <TouchableOpacity>
                       <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
@@ -154,7 +140,7 @@ export default class HomeScreen extends React.Component {
                   <Text style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item[1].name}</Text>
                     <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
                       <TouchableOpacity>
-                        <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        <Ionicons name='ios-heart-outline' size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                       </TouchableOpacity>
                       <TouchableOpacity>
                       <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
@@ -164,7 +150,6 @@ export default class HomeScreen extends React.Component {
                 </View>
               )}
               keyExtractor={item => item[0].id}
-              ListHeaderComponent = {this._renderHeader}
             />
           </List>
 
