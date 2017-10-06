@@ -13,9 +13,6 @@ import ProfileScreen from '../screens/ProfileScreen';
 
 export default TabNavigator(
   {
-    Profile: {
-      screen: ProfileScreen,
-    },
     Home: {
       screen: HomeScreen,
     },
@@ -27,6 +24,9 @@ export default TabNavigator(
     },
     Interests: {
       screen: InterestsScreen,
+    },
+    Profile: {
+      screen: ProfileScreen,
     },
   },
   {
