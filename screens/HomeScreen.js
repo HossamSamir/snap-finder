@@ -8,7 +8,9 @@ import {
   View,
   FlatList,
   Dimensions,
-  CameraRoll
+  CameraRoll,
+  ScrollView,
+  ActivityIndicator
 } from 'react-native';
 import Carousel from 'react-native-looped-carousel';
 import { Ionicons, Foundation } from '@expo/vector-icons';
@@ -26,6 +28,9 @@ export default class HomeScreen extends React.Component {
     .then((res) => res.json())
     .then((resJson) => {
       resJson.map((user) => {
+        if(user[0].special == true)
+          this.state.specUsers.push(user)
+        else
         this.state.users.push(user)
       })
     })
@@ -41,6 +46,7 @@ export default class HomeScreen extends React.Component {
     this.state = {
       doneFetching: false,
       users: [],
+      specUsers: [],
       size: { width, height },
       heartIcon: 'ios-heart-outline'
     }
@@ -67,13 +73,12 @@ export default class HomeScreen extends React.Component {
       </Carousel>
     )
   }
-
-  _renderList = () => {
+  _renderFooter = () => {
     if (this.state.doneFetching == false) {
       return (<Text>Loading...</Text>)
     } else {
       return (
-        <List containerStyle={{flex: 1, flexDirection: 'row',}}>
+        <List containerStyle={{flex: 1, flexDirection: 'row', backgroundColor: 'darkblue'}}>
               <FlatList
                 data = {this.state.users}
                 renderItem = {({ item }) => (
@@ -85,7 +90,7 @@ export default class HomeScreen extends React.Component {
                         <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
                       </View>
                       <Image
-                        style={{ flex: 1, height: 150, resizeMode: 'contain'}}
+                        style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
                       />
                     <Text style={{ flex: 1, textAlign: 'center', color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>{item[0].name}</Text>
@@ -99,11 +104,76 @@ export default class HomeScreen extends React.Component {
                       </View>
                     </View>
                     <View style={{ flex: 1, margin: 10,  }}>
+                      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
+                        <Foundation name='crown' size={50} color='yellow' style={{ backgroundColor: 'transparent', marginHorizontal: 10}} />
+                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
+                      </View>
                       <Image
-                        style={{ flex: 1, height: 150, resizeMode: 'contain'}}
+                        style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
                       />
-                    <Text style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item[1].name}</Text>
+                    <Text style={{ flex: 1, textAlign: 'center', color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>{item[1].name}</Text>
+                      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
+                        <TouchableOpacity>
+                          <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                        <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                  </View>
+                )}
+                keyExtractor={item => item[0].id}
+              />
+            </List>
+
+      )
+    }
+  }
+
+  _renderList = () => {
+    if (this.state.doneFetching == false) {
+      return (<ActivityIndicator style={{ marginTop: 40 }} size='large' />)
+    } else {
+      return (
+        <List containerStyle={{}}>
+              <FlatList
+                data = {this.state.specUsers}
+                renderItem = {({ item }) => (
+                  <View style={{ flex: 1, flexDirection: 'row',  }}>
+                    <View style={{ flex: 1, margin: 10,  }}>
+                      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
+                        <Foundation name='crown' size={50} color='yellow' style={{ backgroundColor: 'transparent', marginHorizontal: 10}} />
+                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
+                      </View>
+                      <Image
+                        style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
+                        source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
+                      />
+                    <Text style={{ flex: 1, textAlign: 'center', color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>{item[0].name}</Text>
+                      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
+                        <TouchableOpacity>
+                          <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={this.saveBarCode()}>
+                        <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                    <View style={{ flex: 1, margin: 10,  }}>
+                      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
+                        <Foundation name='crown' size={50} color='yellow' style={{ backgroundColor: 'transparent', marginHorizontal: 10}} />
+                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
+                      </View>
+                      <Image
+                        style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
+                        source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
+                      />
+                    <Text style={{ flex: 1, textAlign: 'center', color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>{item[1].name}</Text>
                       <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
@@ -123,6 +193,60 @@ export default class HomeScreen extends React.Component {
     }
   }
 
+
+
+  _renderList2 = () => {
+    if (this.state.doneFetching == false) {
+      return (<Text> </Text>)
+    } else {
+      return (
+        <List containerStyle={{ borderTopColor: 'transparent' }}>
+              <FlatList
+                data = {this.state.users}
+                renderItem = {({ item }) => (
+                  <View style={{ flex: 1, flexDirection: 'row',  }}>
+                    <View style={{ flex: 1, margin: 10,  }}>
+                      <Image
+                        style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
+                        source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
+                      />
+                    <Text style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item[0].name}</Text>
+                      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
+                        <TouchableOpacity>
+                          <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={this.saveBarCode()}>
+                        <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                    <View style={{ flex: 1, margin: 10,  }}>
+                      <Image
+                        style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
+                        source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
+                      />
+                    <Text style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item[1].name}</Text>
+                      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
+                        <TouchableOpacity>
+                          <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                        <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                  </View>
+                )}
+                keyExtractor={item => item[0].id}
+              />
+            </List>
+      )
+    }
+  }
+
+
+
+
   render() {
     return (
       <View style={styles.container}>
@@ -130,7 +254,10 @@ export default class HomeScreen extends React.Component {
           style={{ width, marginBottom: -38, resizeMode: 'contain'}}
           source={require('../assets/images/header.jpg')}
         />
-      {this._renderList()}
+      <ScrollView>
+        {this._renderList()}
+        {this._renderList2()}
+      </ScrollView>
       </View>
 
     );
