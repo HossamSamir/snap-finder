@@ -11,9 +11,8 @@ import {
   CameraRoll
 } from 'react-native';
 import Carousel from 'react-native-looped-carousel';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, Foundation } from '@expo/vector-icons';
 import { List, ListItem, } from 'react-native-elements';
-import Toast, {DURATION} from 'react-native-easy-toast'
 
 const { width, height } = Dimensions.get('window');
 
@@ -36,7 +35,6 @@ export default class HomeScreen extends React.Component {
   }
   saveBarCode() {
     CameraRoll.saveToCameraRoll('https://cae8b291f7a009bc3e401054-wceel7psqz6.netdna-ssl.com/wp-content/uploads/2016/12/Dua-Lipa.jpg');
-    this.refs.toast.show('hello world!')
   }
   constructor(props) {
     super(props);
@@ -76,17 +74,21 @@ export default class HomeScreen extends React.Component {
     } else {
       return (
         <List containerStyle={{flex: 1, flexDirection: 'row',}}>
-          <Toast ref="hello world!"/>
               <FlatList
                 data = {this.state.users}
                 renderItem = {({ item }) => (
                   <View style={{ flex: 1, flexDirection: 'row',  }}>
                     <View style={{ flex: 1, margin: 10,  }}>
+                      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
+                        <Foundation name='crown' size={50} color='yellow' style={{ backgroundColor: 'transparent', marginHorizontal: 10}} />
+                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
+                      </View>
                       <Image
                         style={{ flex: 1, height: 150, resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
                       />
-                    <Text style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item[0].name}</Text>
+                    <Text style={{ flex: 1, textAlign: 'center', color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>{item[0].name}</Text>
                       <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
