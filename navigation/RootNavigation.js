@@ -5,6 +5,7 @@ import Login from '../screens/Login';
 import Signup from '../screens/Signup';
 import Interest from '../screens/Interest';
 import Results from '../screens/Results';
+import ProfileTemplate from '../screens/ProfileTemplate';
 
 import MainTabNavigator from './MainTabNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
@@ -19,6 +20,9 @@ const RootStackNavigator = StackNavigator(
     },
     Signup: {
       screen: Signup,
+    },
+    ProfileTemplate: {
+      screen: ProfileTemplate,
     },
     Results: {
       screen: Results,

@@ -10,7 +10,8 @@ import {
   Dimensions,
   CameraRoll,
   ScrollView,
-  ActivityIndicator
+  ActivityIndicator,
+  Alert
 } from 'react-native';
 import Carousel from 'react-native-looped-carousel';
 import { Ionicons, Foundation } from '@expo/vector-icons';
@@ -143,17 +144,16 @@ export default class HomeScreen extends React.Component {
                 data = {this.state.specUsers}
                 renderItem = {({ item }) => (
                   <View style={{ flex: 1, flexDirection: 'row',  }}>
-                    <View style={{ flex: 1, margin: 10,  }}>
-                      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
-                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
-                        <Foundation name='crown' size={50} color='yellow' style={{ backgroundColor: 'transparent', marginHorizontal: 10}} />
-                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
-                      </View>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('ProfileTemplate', {name: item[0].name}) } style={{ flex: 1, margin: 10,  }}>
                       <Image
                         style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
                       />
-                    <Text style={{ flex: 1, textAlign: 'center', color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>{item[0].name}</Text>
+                    <Text style={{ flex: 1, textAlign: 'center', color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>
+                        <Foundation name='star' size={30} style={{ backgroundColor: 'transparent',}} />
+                        {item[0].name}
+                        <Foundation name='star' size={30} style={{ backgroundColor: 'transparent',}} />
+                      </Text>
                       <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
@@ -162,18 +162,17 @@ export default class HomeScreen extends React.Component {
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
-                    </View>
-                    <View style={{ flex: 1, margin: 10,  }}>
-                      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
-                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
-                        <Foundation name='crown' size={50} color='yellow' style={{ backgroundColor: 'transparent', marginHorizontal: 10}} />
-                        <Foundation name='star' size={30} color='yellow' style={{ backgroundColor: 'transparent',}} />
-                      </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('ProfileTemplate', {name: item[1].name}) } style={{ flex: 1, margin: 10,  }}>
                       <Image
                         style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
                       />
-                    <Text style={{ flex: 1, textAlign: 'center', color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>{item[1].name}</Text>
+                    <Text style={{ flex: 1, textAlign: 'center',  color: 'crimson', fontSize: 18, fontWeight: 'bold' }}>
+                      <Foundation name='star' size={30} style={{ backgroundColor: 'transparent',}} />
+                      {item[1].name}
+                      <Foundation name='star' size={30} style={{ backgroundColor: 'transparent',}} />
+                    </Text>
                       <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
@@ -182,7 +181,7 @@ export default class HomeScreen extends React.Component {
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
-                    </View>
+                    </TouchableOpacity>
                   </View>
                 )}
                 keyExtractor={item => item[0].id}
@@ -205,7 +204,7 @@ export default class HomeScreen extends React.Component {
                 data = {this.state.users}
                 renderItem = {({ item }) => (
                   <View style={{ flex: 1, flexDirection: 'row',  }}>
-                    <View style={{ flex: 1, margin: 10,  }}>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('ProfileTemplate', {name: item[0].name}) } style={{ flex: 1, margin: 10,  }}>
                       <Image
                         style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
@@ -219,8 +218,8 @@ export default class HomeScreen extends React.Component {
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
-                    </View>
-                    <View style={{ flex: 1, margin: 10,  }}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('ProfileTemplate', {name: item[1].name}) } style={{ flex: 1, margin: 10,  }}>
                       <Image
                         style={{ flex: 1, height: 150, marginHorizontal: 30,resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
@@ -234,7 +233,7 @@ export default class HomeScreen extends React.Component {
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
-                    </View>
+                    </TouchableOpacity>
                   </View>
                 )}
                 keyExtractor={item => item[0].id}

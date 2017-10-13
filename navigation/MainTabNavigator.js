@@ -13,14 +13,14 @@ import ProfileScreen from '../screens/ProfileScreen';
 
 export default TabNavigator(
   {
+    الرئيسية: {
+      screen: HomeScreen,
+    },
     بحث: {
       screen: SearchScreen,
     },
     المفضله: {
       screen: FavScreen,
-    },
-    الرئيسية: {
-      screen: HomeScreen,
     },
     اهتمامات: {
       screen: InterestsScreen,

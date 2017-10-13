@@ -23,7 +23,6 @@ export default class Results extends React.Component {
   }
 
   fetchUsers() {
-    // Alert.alert(this.props.navigation.state.params.keyword);
     fetch(`http://solosnap.herokuapp.com/api/search?name=${this.props.navigation.state.params.keyword}`)
     .then((res) => res.json())
     .then((resJson) => {
