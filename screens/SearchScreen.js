@@ -19,36 +19,29 @@ const { width, height } = Dimensions.get('window');
 
 export default class SeacrhScreen extends React.Component {
 
+  componentDidMount() {
+    this.fetchTrends();
+  }
+
+  fetchTrends() {
+    fetch('http://solosnap.herokuapp.com/api/trend')
+    .then((res) => res.json())
+    .then((resJson) => {
+      resJson.map((user) => {
+        this.state.users.push(user)
+      })
+    })
+    .then(() => {
+      this.setState({doneFetching: true})
+    })
+  }
+
+
   constructor(props) {
     super(props);
     this.state = {
-      keyword: '',
-      users: [
-        {
-          name: 'Amy Farha',
-          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-          subtitle: 'Vice President',
-          id: 1
-        },
-        {
-          name: 'Hossam Samir',
-          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-          subtitle: 'Vice President',
-          id: 2
-        },
-        {
-          name: 'Hossam Samir',
-          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-          subtitle: 'Vice President',
-          id: 3
-        },
-        {
-          name: 'Hossam Samir',
-          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-          subtitle: 'Vice President',
-          id: 4
-        },
-    ],
+      doneFetching: false,
+      users: [],
       size: { width, height },
       heartIcon: 'ios-heart-outline'
     }
@@ -60,6 +53,32 @@ export default class SeacrhScreen extends React.Component {
     const layout = e.nativeEvent.layout;
     this.setState({ size: { width: layout.width, height: layout.height } });
   }
+  _renderTrendings() {
+    if(this.state.doneFetching == false) {
+      return (<Text>Loading</Text>)
+    } else {
+      return (
+        <List>
+          <FlatList
+            horizontal={true}
+            data = {this.state.users}
+            renderItem = {({ item }) => (
+              <View style={{ marginTop: 20, width: 150, height: 150 }}>
+                <Image
+                  style={{height: 80, resizeMode: 'contain'}}
+                  source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
+                />
+              <Text style={{  textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item.name}</Text>
+
+              </View>
+            )}
+            keyExtractor={item => item.id}
+          />
+        </List>
+      )
+    }
+
+  }
 
   render() {
     return (
@@ -69,26 +88,11 @@ export default class SeacrhScreen extends React.Component {
           clearIcon
           onChangeText={ (keyword) => this.setState({keyword}) }
           onSubmitEditing={ () => this.props.navigation.navigate('Results', {keyword: this.state.keyword}) }
-          placeholder='Find someone...' />
+          placeholder='أعثر علي شخص ما...' />
 
         <Text style={{ marginTop: 10, marginLeft: 10, fontSize: 17, fontWeight: 'bold', color: 'grey' }}>أشهر الأعضاء</Text>
 
-              <List>
-                <FlatList
-                  horizontal={true}
-                  data = {this.state.users}
-                  renderItem = {({ item }) => (
-                    <View style={{  margin: 10,}}>
-                      <Image
-                        style={{height: 80, resizeMode: 'contain'}}
-                        source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
-                      />
-                    <Text style={{  textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item.name}</Text>
-                    </View>
-                  )}
-                  keyExtractor={item => item.id}
-                />
-              </List>
+              {this._renderTrendings()}
 
         </View>
 
