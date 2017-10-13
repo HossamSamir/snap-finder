@@ -13,11 +13,11 @@ import ProfileScreen from '../screens/ProfileScreen';
 
 export default TabNavigator(
   {
-    Home: {
-      screen: HomeScreen,
-    },
     Search: {
       screen: SearchScreen,
+    },
+    Home: {
+      screen: HomeScreen,
     },
     Fav: {
       screen: FavScreen,
