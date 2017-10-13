@@ -71,7 +71,7 @@ export default class SeacrhScreen extends React.Component {
           onSubmitEditing={ () => this.props.navigation.navigate('Results', {keyword: this.state.keyword}) }
           placeholder='Find someone...' />
 
-            <Text style={{ marginTop: 10, marginLeft: 10, fontSize: 17, fontWeight: 'bold', color: 'grey' }}>Trending people:</Text>
+        <Text style={{ marginTop: 10, marginLeft: 10, fontSize: 17, fontWeight: 'bold', color: 'grey' }}>أشهر الأعضاء</Text>
 
               <List>
                 <FlatList

@@ -13,19 +13,19 @@ import ProfileScreen from '../screens/ProfileScreen';
 
 export default TabNavigator(
   {
-    Search: {
+    بحث: {
       screen: SearchScreen,
     },
-    Home: {
-      screen: HomeScreen,
-    },
-    Fav: {
+    المفضله: {
       screen: FavScreen,
     },
-    Interests: {
+    الرئيسية: {
+      screen: HomeScreen,
+    },
+    اهتمامات: {
       screen: InterestsScreen,
     },
-    Profile: {
+    حسابي: {
       screen: ProfileScreen,
     },
   },
@@ -35,27 +35,27 @@ export default TabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         switch (routeName) {
-          case 'Home':
+          case 'الرئيسية':
             iconName = Platform.OS === 'ios'
               ? `ios-home${focused ? '' : '-outline'}`
               : 'md-home';
             break;
-          case 'Search':
+          case 'بحث':
             iconName = Platform.OS === 'ios'
               ? `ios-search${focused ? '' : '-outline'}`
               : 'md-search';
             break;
-          case 'Fav':
+          case 'المفضله':
             iconName = Platform.OS === 'ios'
               ? `ios-heart${focused ? '' : '-outline'}`
               : 'md-heart';
             break;
-          case 'Interests':
+          case 'اهتمامات':
             iconName = Platform.OS === 'ios'
               ? `ios-albums${focused ? '' : '-outline'}`
               : 'md-albums';
             break;
-          case 'Profile':
+          case 'حسابي':
             iconName = Platform.OS === 'ios'
               ? `ios-person${focused ? '' : '-outline'}`
               : 'md-person';
