@@ -60,7 +60,7 @@ export default class FavScreen extends React.Component {
                 data = {this.state.users}
                 renderItem = {({ item }) => (
                   <View style={{ flex: 1, flexDirection: 'row',  }}>
-                    <View style={{ flex: 1, margin: 10,  }}>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('ProfileTemplate', {name: item[0].name}) } style={{ flex: 1, margin: 10,  }}>
                       <Image
                         style={{ flex: 1, height: 150, resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
@@ -74,8 +74,8 @@ export default class FavScreen extends React.Component {
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
-                    </View>
-                    <View style={{ flex: 1, margin: 10,  }}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('ProfileTemplate', {name: item[1].name}) } style={{ flex: 1, margin: 10,  }}>
                       <Image
                         style={{ flex: 1, height: 150, resizeMode: 'contain'}}
                         source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
@@ -89,7 +89,7 @@ export default class FavScreen extends React.Component {
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
-                    </View>
+                    </TouchableOpacity>
                   </View>
                 )}
                 keyExtractor={item => item[0].id}
