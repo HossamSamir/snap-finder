@@ -63,14 +63,14 @@ export default class SeacrhScreen extends React.Component {
             horizontal={true}
             data = {this.state.users}
             renderItem = {({ item }) => (
-              <View style={{ marginTop: 20, width: 150, height: 150 }}>
+              <TouchableOpacity onPress={ () => this.props.navigation.navigate('ProfileTemplate', {name: item.name}) } style={{ marginTop: 20, width: 150, height: 150 }}>
                 <Image
                   style={{height: 80, resizeMode: 'contain'}}
                   source={{uri: 'https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png'}}
                 />
               <Text style={{  textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>{item.name}</Text>
 
-              </View>
+              </TouchableOpacity>
             )}
             keyExtractor={item => item.id}
           />
