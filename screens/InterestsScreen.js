@@ -67,7 +67,7 @@ export default class InterestsScreen extends React.Component {
                       style={{ flex: 1, }}>
                       <Image
                         style={{ flex: 1, height: 120, resizeMode: 'contain'}}
-                        source={{uri: 'https://scontent-cai1-1.xx.fbcdn.net/v/t34.0-12/22155479_537675249907710_173038723_n.png?oh=74c53b66a2b809afca1fe4d2015f9ba6&oe=59D1954C'}}
+                        source={{uri: 'https://scontent-cai1-1.xx.fbcdn.net/v/t34.0-12/22278467_1961850960770059_1508159041_n.png?oh=364332a4c75a8a9c45d47e90a6bc01d4&oe=59E3B8B6'}}
                       />
                     <Text style={{ flex: 1, textAlign: 'center', fontSize: 19, padding: 20, fontWeight: 'bold', color: 'crimson' }}>{item[0].name}</Text>
                     </TouchableOpacity>
@@ -79,7 +79,7 @@ export default class InterestsScreen extends React.Component {
                       style={{ flex: 1, margin: 10,  }}>
                       <Image
                         style={{ flex: 1, height: 120, resizeMode: 'contain'}}
-                        source={{uri: 'https://scontent-cai1-1.xx.fbcdn.net/v/t34.0-12/22155479_537675249907710_173038723_n.png?oh=74c53b66a2b809afca1fe4d2015f9ba6&oe=59D1954C'}}
+                        source={{uri: 'https://scontent-cai1-1.xx.fbcdn.net/v/t34.0-12/22278467_1961850960770059_1508159041_n.png?oh=364332a4c75a8a9c45d47e90a6bc01d4&oe=59E3B8B6'}}
                       />
                     <Text style={{ flex: 1, textAlign: 'center', fontSize: 19, padding: 20, fontWeight: 'bold', color: 'crimson' }}>{item[1].name}</Text>
                     </TouchableOpacity>

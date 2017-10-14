@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  CameraRoll,
   AsyncStorage,
   FlatList
 } from 'react-native';
@@ -52,6 +53,10 @@ export default class ProfileScreen extends React.Component {
     }
   }
 
+  saveBarCode = () => {
+    CameraRoll.saveToCameraRoll('https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png');
+  }
+
   static navigationOptions = ({navigation}) => ({
       title: navigation.state.params.name,
     });
@@ -74,7 +79,7 @@ export default class ProfileScreen extends React.Component {
                 <TouchableOpacity>
                   <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={this.saveBarCode}>
                 <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                 </TouchableOpacity>
               </View>

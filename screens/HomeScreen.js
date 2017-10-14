@@ -39,7 +39,7 @@ export default class HomeScreen extends React.Component {
       this.setState({doneFetching: true})
     })
   }
-  saveBarCode() {
+  saveBarCode = () => {
     CameraRoll.saveToCameraRoll('https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png');
   }
   constructor(props) {
@@ -99,7 +99,7 @@ export default class HomeScreen extends React.Component {
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={this.saveBarCode()}>
+                        <TouchableOpacity onPress={this.saveBarCode}>
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
@@ -119,7 +119,7 @@ export default class HomeScreen extends React.Component {
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={this.saveBarCode()}>
+                        <TouchableOpacity onPress={this.saveBarCode}>
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
@@ -158,7 +158,7 @@ export default class HomeScreen extends React.Component {
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={this.saveBarCode()}>
+                        <TouchableOpacity onPress={this.saveBarCode}>
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
@@ -177,7 +177,7 @@ export default class HomeScreen extends React.Component {
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={this.saveBarCode()}>
+                        <TouchableOpacity onPress={this.saveBarCode}>
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>
@@ -214,7 +214,7 @@ export default class HomeScreen extends React.Component {
                         <TouchableOpacity>
                           <Ionicons name={10 > 5 ? 'ios-heart-outline' : 'ios-heart'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={this.saveBarCode()}>
+                        <TouchableOpacity onPress={this.saveBarCode}>
                         <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                         </TouchableOpacity>
                       </View>

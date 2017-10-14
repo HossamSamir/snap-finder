@@ -9,7 +9,8 @@ import {
   View,
   FlatList,
   Dimensions,
-  Alert
+  Alert,
+  CameraRoll
 } from 'react-native';
 import Carousel from 'react-native-looped-carousel';
 import { Ionicons } from '@expo/vector-icons';
@@ -34,6 +35,10 @@ export default class Results extends React.Component {
     .then(() => {
       this.setState({doneFetching: true})
     })
+  }
+
+  saveBarCode = () => {
+    CameraRoll.saveToCameraRoll('https://thenextweb.com/wp-content/blogs.dir/1/files/2015/05/snapcode.png');
   }
 
   constructor(props) {
@@ -74,7 +79,7 @@ export default class Results extends React.Component {
                           <TouchableOpacity>
                             <Ionicons name='ios-heart-outline' size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                           </TouchableOpacity>
-                          <TouchableOpacity>
+                          <TouchableOpacity onPress={this.saveBarCode}>
                           <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                           </TouchableOpacity>
                         </View>
@@ -89,7 +94,7 @@ export default class Results extends React.Component {
                           <TouchableOpacity>
                             <Ionicons name='ios-heart-outline' size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                           </TouchableOpacity>
-                          <TouchableOpacity>
+                          <TouchableOpacity onPress={this.saveBarCode}>
                           <Ionicons name={10 > 5 ? 'ios-cloud-download-outline' : 'ios-cloud-download'} size={38} color='crimson' style={{ backgroundColor: 'transparent', padding: 10 }} />
                           </TouchableOpacity>
                         </View>
