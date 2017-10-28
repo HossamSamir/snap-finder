@@ -1,0 +1,896 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData @expo/samples
+20 silly mapToRegistry name @expo/samples
+21 silly mapToRegistry scope (from package name) @expo
+22 verbose mapToRegistry no registry URL found in name for scope @expo
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: '@expo/samples',
+25 silly mapToRegistry   scope: '@expo',
+25 silly mapToRegistry   escapedName: '@expo%2fsamples',
+25 silly mapToRegistry   name: '@expo/samples',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/@expo%2fsamples
+27 silly fetchNamedPackageData expo
+28 silly mapToRegistry name expo
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry data Result {
+31 silly mapToRegistry   raw: 'expo',
+31 silly mapToRegistry   scope: null,
+31 silly mapToRegistry   escapedName: 'expo',
+31 silly mapToRegistry   name: 'expo',
+31 silly mapToRegistry   rawSpec: '',
+31 silly mapToRegistry   spec: 'latest',
+31 silly mapToRegistry   type: 'tag' }
+32 silly mapToRegistry uri https://registry.npmjs.org/expo
+33 silly fetchNamedPackageData react
+34 silly mapToRegistry name react
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry data Result {
+37 silly mapToRegistry   raw: 'react',
+37 silly mapToRegistry   scope: null,
+37 silly mapToRegistry   escapedName: 'react',
+37 silly mapToRegistry   name: 'react',
+37 silly mapToRegistry   rawSpec: '',
+37 silly mapToRegistry   spec: 'latest',
+37 silly mapToRegistry   type: 'tag' }
+38 silly mapToRegistry uri https://registry.npmjs.org/react
+39 silly fetchOtherPackageData react-native@https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz
+40 silly cache add args [ 'react-native@https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz',
+40 silly cache add   null ]
+41 verbose cache add spec react-native@https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz
+42 silly fetchNamedPackageData react-native-elements
+43 silly mapToRegistry name react-native-elements
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry data Result {
+46 silly mapToRegistry   raw: 'react-native-elements',
+46 silly mapToRegistry   scope: null,
+46 silly mapToRegistry   escapedName: 'react-native-elements',
+46 silly mapToRegistry   name: 'react-native-elements',
+46 silly mapToRegistry   rawSpec: '',
+46 silly mapToRegistry   spec: 'latest',
+46 silly mapToRegistry   type: 'tag' }
+47 silly mapToRegistry uri https://registry.npmjs.org/react-native-elements
+48 silly fetchNamedPackageData react-native-fs
+49 silly mapToRegistry name react-native-fs
+50 silly mapToRegistry using default registry
+51 silly mapToRegistry registry https://registry.npmjs.org/
+52 silly mapToRegistry data Result {
+52 silly mapToRegistry   raw: 'react-native-fs',
+52 silly mapToRegistry   scope: null,
+52 silly mapToRegistry   escapedName: 'react-native-fs',
+52 silly mapToRegistry   name: 'react-native-fs',
+52 silly mapToRegistry   rawSpec: '',
+52 silly mapToRegistry   spec: 'latest',
+52 silly mapToRegistry   type: 'tag' }
+53 silly mapToRegistry uri https://registry.npmjs.org/react-native-fs
+54 silly fetchNamedPackageData react-native-looped-carousel
+55 silly mapToRegistry name react-native-looped-carousel
+56 silly mapToRegistry using default registry
+57 silly mapToRegistry registry https://registry.npmjs.org/
+58 silly mapToRegistry data Result {
+58 silly mapToRegistry   raw: 'react-native-looped-carousel',
+58 silly mapToRegistry   scope: null,
+58 silly mapToRegistry   escapedName: 'react-native-looped-carousel',
+58 silly mapToRegistry   name: 'react-native-looped-carousel',
+58 silly mapToRegistry   rawSpec: '',
+58 silly mapToRegistry   spec: 'latest',
+58 silly mapToRegistry   type: 'tag' }
+59 silly mapToRegistry uri https://registry.npmjs.org/react-native-looped-carousel
+60 silly fetchNamedPackageData react-navigation
+61 silly mapToRegistry name react-navigation
+62 silly mapToRegistry using default registry
+63 silly mapToRegistry registry https://registry.npmjs.org/
+64 silly mapToRegistry data Result {
+64 silly mapToRegistry   raw: 'react-navigation',
+64 silly mapToRegistry   scope: null,
+64 silly mapToRegistry   escapedName: 'react-navigation',
+64 silly mapToRegistry   name: 'react-navigation',
+64 silly mapToRegistry   rawSpec: '',
+64 silly mapToRegistry   spec: 'latest',
+64 silly mapToRegistry   type: 'tag' }
+65 silly mapToRegistry uri https://registry.npmjs.org/react-navigation
+66 silly cache add parsed spec Result {
+66 silly cache add   raw: 'react-native@https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz',
+66 silly cache add   scope: null,
+66 silly cache add   escapedName: 'react-native',
+66 silly cache add   name: 'react-native',
+66 silly cache add   rawSpec: 'https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz',
+66 silly cache add   spec: 'https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz',
+66 silly cache add   type: 'remote' }
+67 silly mapToRegistry name react-native@https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry https://registry.npmjs.org/
+70 silly mapToRegistry data Result {
+70 silly mapToRegistry   raw: 'react-native@https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz',
+70 silly mapToRegistry   scope: null,
+70 silly mapToRegistry   escapedName: 'react-native',
+70 silly mapToRegistry   name: 'react-native',
+70 silly mapToRegistry   rawSpec: 'https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz',
+70 silly mapToRegistry   spec: 'https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz',
+70 silly mapToRegistry   type: 'remote' }
+71 silly mapToRegistry uri https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz
+72 verbose addRemoteTarball https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz not in flight; adding
+73 verbose addRemoteTarball [ 'https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz',
+73 verbose addRemoteTarball   null ]
+74 verbose request uri https://registry.npmjs.org/@expo%2fsamples
+75 verbose request no auth needed
+76 info attempt registry request try #1 at 3:04:34 AM
+77 verbose request id 1569de8a5784cf4a
+78 verbose etag W/"59e91732-25da"
+79 verbose lastModified Thu, 19 Oct 2017 21:20:50 GMT
+80 http request GET https://registry.npmjs.org/@expo%2fsamples
+81 verbose request uri https://registry.npmjs.org/react-native-elements
+82 verbose request no auth needed
+83 info attempt registry request try #1 at 3:04:34 AM
+84 verbose etag W/"59ea5b3a-1cf27"
+85 verbose lastModified Fri, 20 Oct 2017 20:23:22 GMT
+86 http request GET https://registry.npmjs.org/react-native-elements
+87 verbose request uri https://registry.npmjs.org/react-native-fs
+88 verbose request no auth needed
+89 info attempt registry request try #1 at 3:04:34 AM
+90 verbose etag W/"59d7ad65-10972"
+91 verbose lastModified Fri, 06 Oct 2017 16:20:53 GMT
+92 http request GET https://registry.npmjs.org/react-native-fs
+93 verbose request uri https://registry.npmjs.org/react
+94 verbose request no auth needed
+95 info attempt registry request try #1 at 3:04:34 AM
+96 verbose etag W/"59f1f875-30511"
+97 verbose lastModified Thu, 26 Oct 2017 15:00:05 GMT
+98 http request GET https://registry.npmjs.org/react
+99 verbose request uri https://registry.npmjs.org/expo
+100 verbose request no auth needed
+101 info attempt registry request try #1 at 3:04:34 AM
+102 verbose etag W/"59efc7b6-2c67c"
+103 verbose lastModified Tue, 24 Oct 2017 23:07:34 GMT
+104 http request GET https://registry.npmjs.org/expo
+105 verbose request uri https://registry.npmjs.org/react-native-looped-carousel
+106 verbose request no auth needed
+107 info attempt registry request try #1 at 3:04:34 AM
+108 verbose etag W/"59ba5182-cf49"
+109 verbose lastModified Thu, 14 Sep 2017 09:53:06 GMT
+110 http request GET https://registry.npmjs.org/react-native-looped-carousel
+111 verbose request uri https://registry.npmjs.org/react-navigation
+112 verbose request no auth needed
+113 info attempt registry request try #1 at 3:04:34 AM
+114 verbose etag W/"59e756cb-11e5e"
+115 verbose lastModified Wed, 18 Oct 2017 13:27:39 GMT
+116 http request GET https://registry.npmjs.org/react-navigation
+117 info retry fetch attempt 1 at 3:04:34 AM
+118 info attempt registry request try #1 at 3:04:34 AM
+119 http fetch GET https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz
+120 http 304 https://registry.npmjs.org/react
+121 verbose headers { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+121 verbose headers   via: '1.1 varnish',
+121 verbose headers   'cache-control': 'max-age=300',
+121 verbose headers   etag: 'W/"59f1f875-30511"',
+121 verbose headers   age: '253',
+121 verbose headers   connection: 'keep-alive',
+121 verbose headers   'x-served-by': 'cache-hhn1522-HHN',
+121 verbose headers   'x-cache': 'HIT',
+121 verbose headers   'x-cache-hits': '2',
+121 verbose headers   'x-timer': 'S1509066275.082383,VS0,VE0',
+121 verbose headers   vary: 'Accept-Encoding, Accept' }
+122 silly get cb [ 304,
+122 silly get   { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+122 silly get     via: '1.1 varnish',
+122 silly get     'cache-control': 'max-age=300',
+122 silly get     etag: 'W/"59f1f875-30511"',
+122 silly get     age: '253',
+122 silly get     connection: 'keep-alive',
+122 silly get     'x-served-by': 'cache-hhn1522-HHN',
+122 silly get     'x-cache': 'HIT',
+122 silly get     'x-cache-hits': '2',
+122 silly get     'x-timer': 'S1509066275.082383,VS0,VE0',
+122 silly get     vary: 'Accept-Encoding, Accept' } ]
+123 verbose etag https://registry.npmjs.org/react from cache
+124 verbose get saving react to C:\Users\khali\AppData\Roaming\npm-cache\registry.npmjs.org\react\.cache.json
+125 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+126 http 304 https://registry.npmjs.org/react-native-elements
+127 verbose headers { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+127 verbose headers   via: '1.1 varnish',
+127 verbose headers   'cache-control': 'max-age=300',
+127 verbose headers   etag: 'W/"59ea5b3a-1cf27"',
+127 verbose headers   age: '0',
+127 verbose headers   connection: 'keep-alive',
+127 verbose headers   'x-served-by': 'cache-hhn1547-HHN',
+127 verbose headers   'x-cache': 'MISS',
+127 verbose headers   'x-cache-hits': '0',
+127 verbose headers   'x-timer': 'S1509066275.053866,VS0,VE30',
+127 verbose headers   vary: 'Accept-Encoding, Accept' }
+128 silly get cb [ 304,
+128 silly get   { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+128 silly get     via: '1.1 varnish',
+128 silly get     'cache-control': 'max-age=300',
+128 silly get     etag: 'W/"59ea5b3a-1cf27"',
+128 silly get     age: '0',
+128 silly get     connection: 'keep-alive',
+128 silly get     'x-served-by': 'cache-hhn1547-HHN',
+128 silly get     'x-cache': 'MISS',
+128 silly get     'x-cache-hits': '0',
+128 silly get     'x-timer': 'S1509066275.053866,VS0,VE30',
+128 silly get     vary: 'Accept-Encoding, Accept' } ]
+129 verbose etag https://registry.npmjs.org/react-native-elements from cache
+130 verbose get saving react-native-elements to C:\Users\khali\AppData\Roaming\npm-cache\registry.npmjs.org\react-native-elements\.cache.json
+131 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+132 http 304 https://registry.npmjs.org/react-native-looped-carousel
+133 verbose headers { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+133 verbose headers   via: '1.1 varnish',
+133 verbose headers   'cache-control': 'max-age=300',
+133 verbose headers   etag: 'W/"59ba5182-cf49"',
+133 verbose headers   age: '0',
+133 verbose headers   connection: 'keep-alive',
+133 verbose headers   'x-served-by': 'cache-hhn1521-HHN',
+133 verbose headers   'x-cache': 'MISS',
+133 verbose headers   'x-cache-hits': '0',
+133 verbose headers   'x-timer': 'S1509066275.096314,VS0,VE1',
+133 verbose headers   vary: 'Accept-Encoding, Accept' }
+134 silly get cb [ 304,
+134 silly get   { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+134 silly get     via: '1.1 varnish',
+134 silly get     'cache-control': 'max-age=300',
+134 silly get     etag: 'W/"59ba5182-cf49"',
+134 silly get     age: '0',
+134 silly get     connection: 'keep-alive',
+134 silly get     'x-served-by': 'cache-hhn1521-HHN',
+134 silly get     'x-cache': 'MISS',
+134 silly get     'x-cache-hits': '0',
+134 silly get     'x-timer': 'S1509066275.096314,VS0,VE1',
+134 silly get     vary: 'Accept-Encoding, Accept' } ]
+135 verbose etag https://registry.npmjs.org/react-native-looped-carousel from cache
+136 verbose get saving react-native-looped-carousel to C:\Users\khali\AppData\Roaming\npm-cache\registry.npmjs.org\react-native-looped-carousel\.cache.json
+137 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+138 silly resolveWithNewModule react@16.0.0-alpha.12 checking installable status
+139 silly cache add args [ 'react@16.0.0-alpha.12', null ]
+140 verbose cache add spec react@16.0.0-alpha.12
+141 silly cache add parsed spec Result {
+141 silly cache add   raw: 'react@16.0.0-alpha.12',
+141 silly cache add   scope: null,
+141 silly cache add   escapedName: 'react',
+141 silly cache add   name: 'react',
+141 silly cache add   rawSpec: '16.0.0-alpha.12',
+141 silly cache add   spec: '16.0.0-alpha.12',
+141 silly cache add   type: 'version' }
+142 silly addNamed react@16.0.0-alpha.12
+143 verbose addNamed "16.0.0-alpha.12" is a plain semver version for react
+144 silly mapToRegistry name react
+145 silly mapToRegistry using default registry
+146 silly mapToRegistry registry https://registry.npmjs.org/
+147 silly mapToRegistry data Result {
+147 silly mapToRegistry   raw: 'react',
+147 silly mapToRegistry   scope: null,
+147 silly mapToRegistry   escapedName: 'react',
+147 silly mapToRegistry   name: 'react',
+147 silly mapToRegistry   rawSpec: '',
+147 silly mapToRegistry   spec: 'latest',
+147 silly mapToRegistry   type: 'tag' }
+148 silly mapToRegistry uri https://registry.npmjs.org/react
+149 verbose addNameVersion registry:https://registry.npmjs.org/react not in flight; fetching
+150 http 304 https://registry.npmjs.org/react-navigation
+151 verbose headers { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+151 verbose headers   via: '1.1 varnish',
+151 verbose headers   'cache-control': 'max-age=300',
+151 verbose headers   etag: 'W/"59e756cb-11e5e"',
+151 verbose headers   age: '0',
+151 verbose headers   connection: 'keep-alive',
+151 verbose headers   'x-served-by': 'cache-hhn1542-HHN',
+151 verbose headers   'x-cache': 'HIT',
+151 verbose headers   'x-cache-hits': '1',
+151 verbose headers   'x-timer': 'S1509066275.111502,VS0,VE2',
+151 verbose headers   vary: 'Accept-Encoding, Accept' }
+152 silly get cb [ 304,
+152 silly get   { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+152 silly get     via: '1.1 varnish',
+152 silly get     'cache-control': 'max-age=300',
+152 silly get     etag: 'W/"59e756cb-11e5e"',
+152 silly get     age: '0',
+152 silly get     connection: 'keep-alive',
+152 silly get     'x-served-by': 'cache-hhn1542-HHN',
+152 silly get     'x-cache': 'HIT',
+152 silly get     'x-cache-hits': '1',
+152 silly get     'x-timer': 'S1509066275.111502,VS0,VE2',
+152 silly get     vary: 'Accept-Encoding, Accept' } ]
+153 verbose etag https://registry.npmjs.org/react-navigation from cache
+154 verbose get saving react-navigation to C:\Users\khali\AppData\Roaming\npm-cache\registry.npmjs.org\react-navigation\.cache.json
+155 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+156 silly resolveWithNewModule react-native-elements@0.17.0 checking installable status
+157 silly cache add args [ 'react-native-elements@^0.17.0', null ]
+158 verbose cache add spec react-native-elements@^0.17.0
+159 silly cache add parsed spec Result {
+159 silly cache add   raw: 'react-native-elements@^0.17.0',
+159 silly cache add   scope: null,
+159 silly cache add   escapedName: 'react-native-elements',
+159 silly cache add   name: 'react-native-elements',
+159 silly cache add   rawSpec: '^0.17.0',
+159 silly cache add   spec: '>=0.17.0 <0.18.0',
+159 silly cache add   type: 'range' }
+160 silly addNamed react-native-elements@>=0.17.0 <0.18.0
+161 verbose addNamed ">=0.17.0 <0.18.0" is a valid semver range for react-native-elements
+162 silly addNameRange { name: 'react-native-elements',
+162 silly addNameRange   range: '>=0.17.0 <0.18.0',
+162 silly addNameRange   hasData: false }
+163 silly mapToRegistry name react-native-elements
+164 silly mapToRegistry using default registry
+165 silly mapToRegistry registry https://registry.npmjs.org/
+166 silly mapToRegistry data Result {
+166 silly mapToRegistry   raw: 'react-native-elements',
+166 silly mapToRegistry   scope: null,
+166 silly mapToRegistry   escapedName: 'react-native-elements',
+166 silly mapToRegistry   name: 'react-native-elements',
+166 silly mapToRegistry   rawSpec: '',
+166 silly mapToRegistry   spec: 'latest',
+166 silly mapToRegistry   type: 'tag' }
+167 silly mapToRegistry uri https://registry.npmjs.org/react-native-elements
+168 verbose addNameRange registry:https://registry.npmjs.org/react-native-elements not in flight; fetching
+169 http 304 https://registry.npmjs.org/react-native-fs
+170 verbose headers { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+170 verbose headers   via: '1.1 varnish',
+170 verbose headers   'cache-control': 'max-age=300',
+170 verbose headers   etag: 'W/"59d7ad65-10972"',
+170 verbose headers   age: '0',
+170 verbose headers   connection: 'keep-alive',
+170 verbose headers   'x-served-by': 'cache-hhn1544-HHN',
+170 verbose headers   'x-cache': 'MISS',
+170 verbose headers   'x-cache-hits': '0',
+170 verbose headers   'x-timer': 'S1509066275.026797,VS0,VE92',
+170 verbose headers   vary: 'Accept-Encoding, Accept' }
+171 silly get cb [ 304,
+171 silly get   { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+171 silly get     via: '1.1 varnish',
+171 silly get     'cache-control': 'max-age=300',
+171 silly get     etag: 'W/"59d7ad65-10972"',
+171 silly get     age: '0',
+171 silly get     connection: 'keep-alive',
+171 silly get     'x-served-by': 'cache-hhn1544-HHN',
+171 silly get     'x-cache': 'MISS',
+171 silly get     'x-cache-hits': '0',
+171 silly get     'x-timer': 'S1509066275.026797,VS0,VE92',
+171 silly get     vary: 'Accept-Encoding, Accept' } ]
+172 verbose etag https://registry.npmjs.org/react-native-fs from cache
+173 verbose get saving react-native-fs to C:\Users\khali\AppData\Roaming\npm-cache\registry.npmjs.org\react-native-fs\.cache.json
+174 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+175 http 304 https://registry.npmjs.org/expo
+176 verbose headers { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+176 verbose headers   via: '1.1 varnish',
+176 verbose headers   'cache-control': 'max-age=300',
+176 verbose headers   etag: 'W/"59efc7b6-2c67c"',
+176 verbose headers   age: '44',
+176 verbose headers   connection: 'keep-alive',
+176 verbose headers   'x-served-by': 'cache-hhn1524-HHN',
+176 verbose headers   'x-cache': 'HIT',
+176 verbose headers   'x-cache-hits': '1',
+176 verbose headers   'x-timer': 'S1509066275.133405,VS0,VE0',
+176 verbose headers   vary: 'Accept-Encoding, Accept' }
+177 silly get cb [ 304,
+177 silly get   { date: 'Fri, 27 Oct 2017 01:04:35 GMT',
+177 silly get     via: '1.1 varnish',
+177 silly get     'cache-control': 'max-age=300',
+177 silly get     etag: 'W/"59efc7b6-2c67c"',
+177 silly get     age: '44',
+177 silly get     connection: 'keep-alive',
+177 silly get     'x-served-by': 'cache-hhn1524-HHN',
+177 silly get     'x-cache': 'HIT',
+177 silly get     'x-cache-hits': '1',
+177 silly get     'x-timer': 'S1509066275.133405,VS0,VE0',
+177 silly get     vary: 'Accept-Encoding, Accept' } ]
+178 verbose etag https://registry.npmjs.org/expo from cache
+179 verbose get saving expo to C:\Users\khali\AppData\Roaming\npm-cache\registry.npmjs.org\expo\.cache.json
+180 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+181 verbose get https://registry.npmjs.org/react not expired, no request
+182 verbose get https://registry.npmjs.org/react-native-elements not expired, no request
+183 silly addNameRange number 2 { name: 'react-native-elements',
+183 silly addNameRange   range: '>=0.17.0 <0.18.0',
+183 silly addNameRange   hasData: true }
+184 silly addNameRange versions [ 'react-native-elements',
+184 silly addNameRange   [ '0.0.1',
+184 silly addNameRange     '0.0.2',
+184 silly addNameRange     '0.0.3',
+184 silly addNameRange     '0.0.4',
+184 silly addNameRange     '0.0.5',
+184 silly addNameRange     '0.0.6',
+184 silly addNameRange     '0.1.0',
+184 silly addNameRange     '0.1.1',
+184 silly addNameRange     '0.2.0',
+184 silly addNameRange     '0.2.1',
+184 silly addNameRange     '0.3.0',
+184 silly addNameRange     '0.3.1',
+184 silly addNameRange     '0.3.2',
+184 silly addNameRange     '0.4.0',
+184 silly addNameRange     '0.4.1',
+184 silly addNameRange     '0.4.2',
+184 silly addNameRange     '0.4.3',
+184 silly addNameRange     '0.4.4',
+184 silly addNameRange     '0.4.5',
+184 silly addNameRange     '0.4.6',
+184 silly addNameRange     '0.4.7',
+184 silly addNameRange     '0.4.8',
+184 silly addNameRange     '0.5.0',
+184 silly addNameRange     '0.5.1',
+184 silly addNameRange     '0.5.2',
+184 silly addNameRange     '0.5.3',
+184 silly addNameRange     '0.5.4',
+184 silly addNameRange     '0.6.0',
+184 silly addNameRange     '0.6.1',
+184 silly addNameRange     '0.6.2',
+184 silly addNameRange     '0.6.3',
+184 silly addNameRange     '0.6.4',
+184 silly addNameRange     '0.7.0',
+184 silly addNameRange     '0.7.1',
+184 silly addNameRange     '0.7.2',
+184 silly addNameRange     '0.8.0',
+184 silly addNameRange     '0.8.1',
+184 silly addNameRange     '0.8.2',
+184 silly addNameRange     '0.9.0',
+184 silly addNameRange     '0.9.1',
+184 silly addNameRange     '0.9.2',
+184 silly addNameRange     '0.9.3',
+184 silly addNameRange     '0.9.4',
+184 silly addNameRange     '0.9.5',
+184 silly addNameRange     '0.9.6',
+184 silly addNameRange     '0.9.7',
+184 silly addNameRange     '0.10.0',
+184 silly addNameRange     '0.10.1',
+184 silly addNameRange     '0.10.2',
+184 silly addNameRange     '0.10.3',
+184 silly addNameRange     '0.11.0',
+184 silly addNameRange     '0.11.1',
+184 silly addNameRange     '0.11.2',
+184 silly addNameRange     '0.12.0',
+184 silly addNameRange     '0.12.1',
+184 silly addNameRange     '0.12.2',
+184 silly addNameRange     '0.13.0',
+184 silly addNameRange     '0.14.0',
+184 silly addNameRange     '0.15.0',
+184 silly addNameRange     '0.16.0',
+184 silly addNameRange     '0.17.0' ] ]
+185 silly addNamed react-native-elements@0.17.0
+186 verbose addNamed "0.17.0" is a plain semver version for react-native-elements
+187 silly resolveWithNewModule react-native-looped-carousel@0.1.7 checking installable status
+188 silly cache add args [ 'react-native-looped-carousel@^0.1.7', null ]
+189 verbose cache add spec react-native-looped-carousel@^0.1.7
+190 silly cache add parsed spec Result {
+190 silly cache add   raw: 'react-native-looped-carousel@^0.1.7',
+190 silly cache add   scope: null,
+190 silly cache add   escapedName: 'react-native-looped-carousel',
+190 silly cache add   name: 'react-native-looped-carousel',
+190 silly cache add   rawSpec: '^0.1.7',
+190 silly cache add   spec: '>=0.1.7 <0.2.0',
+190 silly cache add   type: 'range' }
+191 silly addNamed react-native-looped-carousel@>=0.1.7 <0.2.0
+192 verbose addNamed ">=0.1.7 <0.2.0" is a valid semver range for react-native-looped-carousel
+193 silly addNameRange { name: 'react-native-looped-carousel',
+193 silly addNameRange   range: '>=0.1.7 <0.2.0',
+193 silly addNameRange   hasData: false }
+194 silly mapToRegistry name react-native-looped-carousel
+195 silly mapToRegistry using default registry
+196 silly mapToRegistry registry https://registry.npmjs.org/
+197 silly mapToRegistry data Result {
+197 silly mapToRegistry   raw: 'react-native-looped-carousel',
+197 silly mapToRegistry   scope: null,
+197 silly mapToRegistry   escapedName: 'react-native-looped-carousel',
+197 silly mapToRegistry   name: 'react-native-looped-carousel',
+197 silly mapToRegistry   rawSpec: '',
+197 silly mapToRegistry   spec: 'latest',
+197 silly mapToRegistry   type: 'tag' }
+198 silly mapToRegistry uri https://registry.npmjs.org/react-native-looped-carousel
+199 verbose addNameRange registry:https://registry.npmjs.org/react-native-looped-carousel not in flight; fetching
+200 silly cache afterAdd react@16.0.0-alpha.12
+201 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react\16.0.0-alpha.12\package\package.json not in flight; writing
+202 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+203 silly cache afterAdd react-native-elements@0.17.0
+204 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react-native-elements\0.17.0\package\package.json not in flight; writing
+205 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+206 silly resolveWithNewModule react-native-fs@2.8.1 checking installable status
+207 silly cache add args [ 'react-native-fs@^2.8.1', null ]
+208 verbose cache add spec react-native-fs@^2.8.1
+209 silly cache add parsed spec Result {
+209 silly cache add   raw: 'react-native-fs@^2.8.1',
+209 silly cache add   scope: null,
+209 silly cache add   escapedName: 'react-native-fs',
+209 silly cache add   name: 'react-native-fs',
+209 silly cache add   rawSpec: '^2.8.1',
+209 silly cache add   spec: '>=2.8.1 <3.0.0',
+209 silly cache add   type: 'range' }
+210 silly addNamed react-native-fs@>=2.8.1 <3.0.0
+211 verbose addNamed ">=2.8.1 <3.0.0" is a valid semver range for react-native-fs
+212 silly addNameRange { name: 'react-native-fs',
+212 silly addNameRange   range: '>=2.8.1 <3.0.0',
+212 silly addNameRange   hasData: false }
+213 silly mapToRegistry name react-native-fs
+214 silly mapToRegistry using default registry
+215 silly mapToRegistry registry https://registry.npmjs.org/
+216 silly mapToRegistry data Result {
+216 silly mapToRegistry   raw: 'react-native-fs',
+216 silly mapToRegistry   scope: null,
+216 silly mapToRegistry   escapedName: 'react-native-fs',
+216 silly mapToRegistry   name: 'react-native-fs',
+216 silly mapToRegistry   rawSpec: '',
+216 silly mapToRegistry   spec: 'latest',
+216 silly mapToRegistry   type: 'tag' }
+217 silly mapToRegistry uri https://registry.npmjs.org/react-native-fs
+218 verbose addNameRange registry:https://registry.npmjs.org/react-native-fs not in flight; fetching
+219 silly resolveWithNewModule react-navigation@1.0.0-beta.15 checking installable status
+220 silly cache add args [ 'react-navigation@^1.0.0-beta.12', null ]
+221 verbose cache add spec react-navigation@^1.0.0-beta.12
+222 silly cache add parsed spec Result {
+222 silly cache add   raw: 'react-navigation@^1.0.0-beta.12',
+222 silly cache add   scope: null,
+222 silly cache add   escapedName: 'react-navigation',
+222 silly cache add   name: 'react-navigation',
+222 silly cache add   rawSpec: '^1.0.0-beta.12',
+222 silly cache add   spec: '>=1.0.0-beta.12 <2.0.0',
+222 silly cache add   type: 'range' }
+223 silly addNamed react-navigation@>=1.0.0-beta.12 <2.0.0
+224 verbose addNamed ">=1.0.0-beta.12 <2.0.0" is a valid semver range for react-navigation
+225 silly addNameRange { name: 'react-navigation',
+225 silly addNameRange   range: '>=1.0.0-beta.12 <2.0.0',
+225 silly addNameRange   hasData: false }
+226 silly mapToRegistry name react-navigation
+227 silly mapToRegistry using default registry
+228 silly mapToRegistry registry https://registry.npmjs.org/
+229 silly mapToRegistry data Result {
+229 silly mapToRegistry   raw: 'react-navigation',
+229 silly mapToRegistry   scope: null,
+229 silly mapToRegistry   escapedName: 'react-navigation',
+229 silly mapToRegistry   name: 'react-navigation',
+229 silly mapToRegistry   rawSpec: '',
+229 silly mapToRegistry   spec: 'latest',
+229 silly mapToRegistry   type: 'tag' }
+230 silly mapToRegistry uri https://registry.npmjs.org/react-navigation
+231 verbose addNameRange registry:https://registry.npmjs.org/react-navigation not in flight; fetching
+232 verbose get https://registry.npmjs.org/react-native-looped-carousel not expired, no request
+233 silly addNameRange number 2 { name: 'react-native-looped-carousel',
+233 silly addNameRange   range: '>=0.1.7 <0.2.0',
+233 silly addNameRange   hasData: true }
+234 silly addNameRange versions [ 'react-native-looped-carousel',
+234 silly addNameRange   [ '0.0.1',
+234 silly addNameRange     '0.0.2',
+234 silly addNameRange     '0.0.3',
+234 silly addNameRange     '0.0.4',
+234 silly addNameRange     '0.0.5',
+234 silly addNameRange     '0.0.6',
+234 silly addNameRange     '0.0.7',
+234 silly addNameRange     '0.0.8',
+234 silly addNameRange     '0.0.9',
+234 silly addNameRange     '0.0.10',
+234 silly addNameRange     '0.0.11',
+234 silly addNameRange     '0.0.12',
+234 silly addNameRange     '0.1.0-0',
+234 silly addNameRange     '0.1.0-1',
+234 silly addNameRange     '0.1.0-2',
+234 silly addNameRange     '0.1.0',
+234 silly addNameRange     '0.1.1',
+234 silly addNameRange     '0.1.2-0',
+234 silly addNameRange     '0.1.2',
+234 silly addNameRange     '0.1.3-0',
+234 silly addNameRange     '0.1.3',
+234 silly addNameRange     '0.1.4-0',
+234 silly addNameRange     '0.1.4',
+234 silly addNameRange     '0.1.5-1',
+234 silly addNameRange     '0.1.5',
+234 silly addNameRange     '0.1.6-0',
+234 silly addNameRange     '0.1.6',
+234 silly addNameRange     '0.1.7',
+234 silly addNameRange     '0.1.7-0',
+234 silly addNameRange     '0.1.8-0' ] ]
+235 silly addNamed react-native-looped-carousel@0.1.7
+236 verbose addNamed "0.1.7" is a plain semver version for react-native-looped-carousel
+237 silly resolveWithNewModule expo@20.1.3 checking installable status
+238 silly cache add args [ 'expo@^20.0.0', null ]
+239 verbose cache add spec expo@^20.0.0
+240 silly cache add parsed spec Result {
+240 silly cache add   raw: 'expo@^20.0.0',
+240 silly cache add   scope: null,
+240 silly cache add   escapedName: 'expo',
+240 silly cache add   name: 'expo',
+240 silly cache add   rawSpec: '^20.0.0',
+240 silly cache add   spec: '>=20.0.0 <21.0.0',
+240 silly cache add   type: 'range' }
+241 silly addNamed expo@>=20.0.0 <21.0.0
+242 verbose addNamed ">=20.0.0 <21.0.0" is a valid semver range for expo
+243 silly addNameRange { name: 'expo', range: '>=20.0.0 <21.0.0', hasData: false }
+244 silly mapToRegistry name expo
+245 silly mapToRegistry using default registry
+246 silly mapToRegistry registry https://registry.npmjs.org/
+247 silly mapToRegistry data Result {
+247 silly mapToRegistry   raw: 'expo',
+247 silly mapToRegistry   scope: null,
+247 silly mapToRegistry   escapedName: 'expo',
+247 silly mapToRegistry   name: 'expo',
+247 silly mapToRegistry   rawSpec: '',
+247 silly mapToRegistry   spec: 'latest',
+247 silly mapToRegistry   type: 'tag' }
+248 silly mapToRegistry uri https://registry.npmjs.org/expo
+249 verbose addNameRange registry:https://registry.npmjs.org/expo not in flight; fetching
+250 verbose get https://registry.npmjs.org/react-native-fs not expired, no request
+251 silly addNameRange number 2 { name: 'react-native-fs',
+251 silly addNameRange   range: '>=2.8.1 <3.0.0',
+251 silly addNameRange   hasData: true }
+252 silly addNameRange versions [ 'react-native-fs',
+252 silly addNameRange   [ '0.1.0',
+252 silly addNameRange     '0.2.0',
+252 silly addNameRange     '0.3.0',
+252 silly addNameRange     '0.3.1',
+252 silly addNameRange     '0.3.2',
+252 silly addNameRange     '0.3.3',
+252 silly addNameRange     '0.3.4',
+252 silly addNameRange     '0.4.0',
+252 silly addNameRange     '1.0.0',
+252 silly addNameRange     '1.1.0',
+252 silly addNameRange     '1.2.0',
+252 silly addNameRange     '1.3.0',
+252 silly addNameRange     '1.4.0',
+252 silly addNameRange     '1.5.0',
+252 silly addNameRange     '1.5.1',
+252 silly addNameRange     '2.0.1-rc.1',
+252 silly addNameRange     '2.0.1-rc.2',
+252 silly addNameRange     '2.0.1-rc.3',
+252 silly addNameRange     '2.1.0-rc.1',
+252 silly addNameRange     '2.3.0',
+252 silly addNameRange     '2.3.2',
+252 silly addNameRange     '2.3.3',
+252 silly addNameRange     '2.4.0',
+252 silly addNameRange     '2.5.0',
+252 silly addNameRange     '2.5.1',
+252 silly addNameRange     '2.5.2',
+252 silly addNameRange     '2.8.0',
+252 silly addNameRange     '2.8.1' ] ]
+253 silly addNamed react-native-fs@2.8.1
+254 verbose addNamed "2.8.1" is a plain semver version for react-native-fs
+255 verbose get https://registry.npmjs.org/react-navigation not expired, no request
+256 silly addNameRange number 2 { name: 'react-navigation',
+256 silly addNameRange   range: '>=1.0.0-beta.12 <2.0.0',
+256 silly addNameRange   hasData: true }
+257 silly addNameRange versions [ 'react-navigation',
+257 silly addNameRange   [ '0.0.0',
+257 silly addNameRange     '1.0.0-beta.1',
+257 silly addNameRange     '1.0.0-beta.2',
+257 silly addNameRange     '1.0.0-beta.3',
+257 silly addNameRange     '1.0.0-beta.4',
+257 silly addNameRange     '1.0.0-beta.5',
+257 silly addNameRange     '1.0.0-beta.6',
+257 silly addNameRange     '1.0.0-beta.7',
+257 silly addNameRange     '1.0.0-beta.8',
+257 silly addNameRange     '1.0.0-beta.9',
+257 silly addNameRange     '1.0.0-beta.10',
+257 silly addNameRange     '1.0.0-beta.11',
+257 silly addNameRange     '1.0.0-beta.12',
+257 silly addNameRange     '1.0.0-beta.13',
+257 silly addNameRange     '1.0.0-beta.14',
+257 silly addNameRange     '1.0.0-beta.15' ] ]
+258 silly addNamed react-navigation@1.0.0-beta.15
+259 verbose addNamed "1.0.0-beta.15" is a plain semver version for react-navigation
+260 verbose get https://registry.npmjs.org/expo not expired, no request
+261 silly addNameRange number 2 { name: 'expo', range: '>=20.0.0 <21.0.0', hasData: true }
+262 silly addNameRange versions [ 'expo',
+262 silly addNameRange   [ '0.1.1',
+262 silly addNameRange     '0.1.2',
+262 silly addNameRange     '0.1.3',
+262 silly addNameRange     '0.1.4',
+262 silly addNameRange     '0.1.5',
+262 silly addNameRange     '0.1.6',
+262 silly addNameRange     '0.1.7',
+262 silly addNameRange     '1.0.0',
+262 silly addNameRange     '14.0.0',
+262 silly addNameRange     '14.0.1',
+262 silly addNameRange     '14.0.2',
+262 silly addNameRange     '15.0.0-rc.1',
+262 silly addNameRange     '15.0.0',
+262 silly addNameRange     '15.0.1-beta.0',
+262 silly addNameRange     '15.0.1-beta.1',
+262 silly addNameRange     '15.0.1',
+262 silly addNameRange     '15.0.2',
+262 silly addNameRange     '15.1.2',
+262 silly addNameRange     '15.1.3',
+262 silly addNameRange     '16.0.0-beta.0',
+262 silly addNameRange     '0.1.0-pre',
+262 silly addNameRange     '0.1.0-pre2',
+262 silly addNameRange     '16.0.0-rc.1',
+262 silly addNameRange     '16.0.0',
+262 silly addNameRange     '17.0.0-rc.1',
+262 silly addNameRange     '17.0.0-rc.2',
+262 silly addNameRange     '17.0.0-rc.3',
+262 silly addNameRange     '17.0.0-rc.4',
+262 silly addNameRange     '17.0.0',
+262 silly addNameRange     '18.0.0-alpha.0',
+262 silly addNameRange     '18.0.0-alpha.1',
+262 silly addNameRange     '18.0.0-rc.1',
+262 silly addNameRange     '18.0.0-rc.2',
+262 silly addNameRange     '18.0.0-rc.3',
+262 silly addNameRange     '18.0.0',
+262 silly addNameRange     '18.0.1',
+262 silly addNameRange     '18.0.2',
+262 silly addNameRange     '18.0.3',
+262 silly addNameRange     '18.0.4-rc.0',
+262 silly addNameRange     '18.0.4',
+262 silly addNameRange     '18.0.5',
+262 silly addNameRange     '18.0.6',
+262 silly addNameRange     '19.0.0-alpha.0',
+262 silly addNameRange     '18.0.8',
+262 silly addNameRange     '18.0.9',
+262 silly addNameRange     '19.0.0-rc.0',
+262 silly addNameRange     '19.0.0-rc.1',
+262 silly addNameRange     '19.0.0-rc.2',
+262 silly addNameRange     '19.0.0-rc.3',
+262 silly addNameRange     '19.0.0-rc.4',
+262 silly addNameRange     '19.0.0-rc.5',
+262 silly addNameRange     '19.0.0-rc.6',
+262 silly addNameRange     '19.0.0-rc.7',
+262 silly addNameRange     '19.0.0',
+262 silly addNameRange     '19.0.1',
+262 silly addNameRange     '20.0.0-alpha.0',
+262 silly addNameRange     '20.0.0-alpha.1',
+262 silly addNameRange     '20.0.0-alpha.2',
+262 silly addNameRange     '20.0.0-alpha.3',
+262 silly addNameRange     '20.0.0-alpha.4',
+262 silly addNameRange     '20.0.0-alpha.5',
+262 silly addNameRange     '20.0.0-alpha.6',
+262 silly addNameRange     '20.0.0-alpha.7',
+262 silly addNameRange     '20.0.0',
+262 silly addNameRange     '20.0.1',
+262 silly addNameRange     '20.0.2',
+262 silly addNameRange     '20.0.3',
+262 silly addNameRange     '20.0.4',
+262 silly addNameRange     '20.1.0',
+262 silly addNameRange     '20.0.5',
+262 silly addNameRange     '20.1.1',
+262 silly addNameRange     '20.1.2',
+262 silly addNameRange     '20.1.3',
+262 silly addNameRange     '21.0.0-alpha.0',
+262 silly addNameRange     '21.0.0-alpha.1',
+262 silly addNameRange     '21.0.0-alpha.2',
+262 silly addNameRange     '21.0.0-rc.0',
+262 silly addNameRange     '21.0.0-rc.1',
+262 silly addNameRange     '21.0.0-rc.3',
+262 silly addNameRange     '21.0.0-rc.4',
+262 silly addNameRange     '21.0.0-rc.5',
+262 silly addNameRange     '21.0.0',
+262 silly addNameRange     '21.0.1',
+262 silly addNameRange     '21.0.2',
+262 silly addNameRange     '22.0.0-rc.0',
+262 silly addNameRange     '22.0.0-rc.1',
+262 silly addNameRange     '22.0.0',
+262 silly addNameRange     '21.0.3' ] ]
+263 silly addNamed expo@20.1.3
+264 verbose addNamed "20.1.3" is a plain semver version for expo
+265 silly cache afterAdd react-native-looped-carousel@0.1.7
+266 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react-native-looped-carousel\0.1.7\package\package.json not in flight; writing
+267 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+268 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react-native-elements\0.17.0\package\package.json written
+269 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react\16.0.0-alpha.12\package\package.json written
+270 silly cache afterAdd react-native-fs@2.8.1
+271 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react-native-fs\2.8.1\package\package.json not in flight; writing
+272 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+273 silly cache afterAdd react-navigation@1.0.0-beta.15
+274 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react-navigation\1.0.0-beta.15\package\package.json not in flight; writing
+275 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+276 silly cache afterAdd expo@20.1.3
+277 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\expo\20.1.3\package\package.json not in flight; writing
+278 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+279 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react-native-looped-carousel\0.1.7\package\package.json written
+280 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react-native-fs\2.8.1\package\package.json written
+281 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\react-navigation\1.0.0-beta.15\package\package.json written
+282 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\expo\20.1.3\package\package.json written
+283 http 304 https://registry.npmjs.org/@expo%2fsamples
+284 verbose headers { date: 'Fri, 27 Oct 2017 01:04:34 GMT',
+284 verbose headers   via: '1.1 varnish',
+284 verbose headers   'cache-control': 'max-age=0',
+284 verbose headers   etag: 'W/"59e91732-25da"',
+284 verbose headers   age: '0',
+284 verbose headers   connection: 'keep-alive',
+284 verbose headers   'x-served-by': 'cache-hhn1551-HHN',
+284 verbose headers   'x-cache': 'MISS',
+284 verbose headers   'x-cache-hits': '0',
+284 verbose headers   'x-timer': 'S1509066275.990997,VS0,VE656',
+284 verbose headers   vary: 'Accept-Encoding' }
+285 silly get cb [ 304,
+285 silly get   { date: 'Fri, 27 Oct 2017 01:04:34 GMT',
+285 silly get     via: '1.1 varnish',
+285 silly get     'cache-control': 'max-age=0',
+285 silly get     etag: 'W/"59e91732-25da"',
+285 silly get     age: '0',
+285 silly get     connection: 'keep-alive',
+285 silly get     'x-served-by': 'cache-hhn1551-HHN',
+285 silly get     'x-cache': 'MISS',
+285 silly get     'x-cache-hits': '0',
+285 silly get     'x-timer': 'S1509066275.990997,VS0,VE656',
+285 silly get     vary: 'Accept-Encoding' } ]
+286 verbose etag https://registry.npmjs.org/@expo%2fsamples from cache
+287 verbose get saving @expo/samples to C:\Users\khali\AppData\Roaming\npm-cache\registry.npmjs.org\_40expo_252fsamples\.cache.json
+288 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+289 silly resolveWithNewModule @expo/samples@2.1.1 checking installable status
+290 silly cache add args [ '@expo/samples@^2.0.2', null ]
+291 verbose cache add spec @expo/samples@^2.0.2
+292 silly cache add parsed spec Result {
+292 silly cache add   raw: '@expo/samples@^2.0.2',
+292 silly cache add   scope: '@expo',
+292 silly cache add   escapedName: '@expo%2fsamples',
+292 silly cache add   name: '@expo/samples',
+292 silly cache add   rawSpec: '^2.0.2',
+292 silly cache add   spec: '>=2.0.2 <3.0.0',
+292 silly cache add   type: 'range' }
+293 silly addNamed @expo/samples@>=2.0.2 <3.0.0
+294 verbose addNamed ">=2.0.2 <3.0.0" is a valid semver range for @expo/samples
+295 silly addNameRange { name: '@expo/samples',
+295 silly addNameRange   range: '>=2.0.2 <3.0.0',
+295 silly addNameRange   hasData: false }
+296 silly mapToRegistry name @expo/samples
+297 silly mapToRegistry scope (from package name) @expo
+298 verbose mapToRegistry no registry URL found in name for scope @expo
+299 silly mapToRegistry using default registry
+300 silly mapToRegistry registry https://registry.npmjs.org/
+301 silly mapToRegistry data Result {
+301 silly mapToRegistry   raw: '@expo/samples',
+301 silly mapToRegistry   scope: '@expo',
+301 silly mapToRegistry   escapedName: '@expo%2fsamples',
+301 silly mapToRegistry   name: '@expo/samples',
+301 silly mapToRegistry   rawSpec: '',
+301 silly mapToRegistry   spec: 'latest',
+301 silly mapToRegistry   type: 'tag' }
+302 silly mapToRegistry uri https://registry.npmjs.org/@expo%2fsamples
+303 verbose addNameRange registry:https://registry.npmjs.org/@expo%2fsamples not in flight; fetching
+304 verbose get https://registry.npmjs.org/@expo%2fsamples not expired, no request
+305 silly addNameRange number 2 { name: '@expo/samples', range: '>=2.0.2 <3.0.0', hasData: true }
+306 silly addNameRange versions [ '@expo/samples',
+306 silly addNameRange   [ '1.0.2',
+306 silly addNameRange     '1.0.3',
+306 silly addNameRange     '1.0.4',
+306 silly addNameRange     '2.0.0',
+306 silly addNameRange     '2.0.1',
+306 silly addNameRange     '2.0.2',
+306 silly addNameRange     '2.1.0',
+306 silly addNameRange     '2.1.1' ] ]
+307 silly addNamed @expo/samples@2.1.1
+308 verbose addNamed "2.1.1" is a plain semver version for @expo/samples
+309 silly cache afterAdd @expo/samples@2.1.1
+310 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\@expo\samples\2.1.1\package\package.json not in flight; writing
+311 verbose correctMkdir C:\Users\khali\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+312 verbose afterAdd C:\Users\khali\AppData\Roaming\npm-cache\@expo\samples\2.1.1\package\package.json written
+313 http fetch 200 https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz
+314 verbose stack Error: kill ENOSYS
+314 verbose stack     at exports._errnoException (util.js:1018:11)
+314 verbose stack     at process.kill (internal/process.js:190:13)
+314 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+314 verbose stack     at emitNone (events.js:91:20)
+314 verbose stack     at process.emit (events.js:185:7)
+314 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+314 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+314 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
+315 verbose cwd E:\snap-finder
+316 error Windows_NT 10.0.14393
+317 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+318 error node v6.11.0
+319 error npm  v3.10.10
+320 error code ENOSYS
+321 error errno ENOSYS
+322 error syscall kill
+323 error kill ENOSYS
+324 error If you need help, you may report this error at:
+324 error     <https://github.com/npm/npm/issues>
+325 verbose exit [ 1, true ]
